@@ -4,10 +4,11 @@
 def wordcount(filename):
     opened_file = open(filename)
     # print opened_file
-    all_lines_together=""
-    for line in opened_file:
-        stripped_line = line.replace('\n',' ')
-        all_lines_together +=stripped_line
+    # all_lines_together=""
+    # for line in opened_file:
+    #     stripped_line = line.replace('\n',' ')
+    #     all_lines_together +=stripped_line
+    all_lines_together = [line.replace('\n',' ') for line in opened_file]
     word_count_dict = {}
     all_lines_together_list = all_lines_together.split(" ")
     for word in all_lines_together_list:
